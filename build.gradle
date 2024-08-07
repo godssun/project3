@@ -63,10 +63,3 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.failBuild {
-    doLast {
-        throw new GradleException("This build is designed to fail")
-    }
-}
-
-build.dependsOn failBuild

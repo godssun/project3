@@ -1,5 +1,25 @@
+server:
+  port: 8080
+
+
 dataSource:
   username: ${DATABASE_USERNAME}
   password: ${DATABASE_PASSWORD}
   driverClassName: org.mariadb.jdbc.Driver
   url: jdbc:mariadb://cicddatebase.cjg6agwiagu5.ap-northeast-2.rds.amazonaws.com:3306/test
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false  # open-in-view 설정을 비활성화
+
+
+
+logging:
+  config: classpath:logback-spring-local.xml
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG

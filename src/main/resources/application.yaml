@@ -1,0 +1,5 @@
+dataSource:
+  username: ${DATABASE_USERNAME}
+  password: ${DATABASE_PASSWORD}
+  driverClassName: org.mariadb.jdbc.Driver
+  url: jdbc:mariadb://cicddatebase.cjg6agwiagu5.ap-northeast-2.rds.amazonaws.com:3306/test

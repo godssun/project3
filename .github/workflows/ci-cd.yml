@@ -9,7 +9,7 @@ on:
       - deploy
 
 env:
-  PROJECT_NAME: cicd_test
+  PROJECT_NAME: project3
   BUCKET_NAME: junawsbuck
   CODE_DEPLOY_APP_NAME: mycodedeploy
   DEPLOYMENT_GROUP_NAME: mycodedeploygroup

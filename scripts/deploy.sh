@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-REPOSITORY=/home/ec2-user/cicdproject
+REPOSITORY=/home/ubuntu/spring/project3
 cd $REPOSITORY
 
 APP_NAME=cicdproject
@@ -11,7 +9,7 @@ CURRENT_PID=$(pgrep -f $APP_NAME)
 
 if [ -z $CURRENT_PID ]
 then
-  echo "> 종료할것 없음."
+  echo "> 종료할 프로세스가 없습니다."
 else
   echo "> kill -9 $CURRENT_PID"
   kill -15 $CURRENT_PID

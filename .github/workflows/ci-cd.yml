@@ -9,7 +9,7 @@ on:
       - deploy
 
 env:
-  PROJECT_NAME: project3
+  PROJECT_NAME: cicd_test
   BUCKET_NAME: junawsbuck
   CODE_DEPLOY_APP_NAME: mycodedeploy
   DEPLOYMENT_GROUP_NAME: mycodedeploygroup
@@ -43,6 +43,14 @@ jobs:
 
       - name: Make Zip File
         run: zip -qq -r ./$GITHUB_SHA.zip .
+        shell: bash
+
+      - name: Print environment variables
+        run: |
+          echo "PROJECT_NAME=${{ env.PROJECT_NAME }}"
+          echo "BUCKET_NAME=${{ env.BUCKET_NAME }}"
+          echo "CODE_DEPLOY_APP_NAME=${{ env.CODE_DEPLOY_APP_NAME }}"
+          echo "DEPLOYMENT_GROUP_NAME=${{ env.DEPLOYMENT_GROUP_NAME }}"
         shell: bash
 
       - name: Configure AWS credentials
